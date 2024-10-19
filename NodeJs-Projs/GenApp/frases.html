@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Quote Generator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    #quote {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+</style>
+</head>
+<body>
+    <h2>Random Quote Generator</h2>
+    <button onclick="generateQuote()">Generate Quote</button>
+    <div id="quote"></div>
+
+    <script>
+        // Array of quotes
+        var quotes = [
+            "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela",
+            "The way to get started is to quit talking and begin doing. - Walt Disney",
+            "Life is what happens when you're busy making other plans. - John Lennon",
+            "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+            "It's not whether you get knocked down, it's whether you get up. - Vince Lombardi"
+        ];
+
+        function generateQuote() {
+            // Get a random index from the quotes array
+            var randomIndex = Math.floor(Math.random() * quotes.length);
+            // Display the random quote
+            document.getElementById("quote").innerHTML = quotes[randomIndex];
+        }
+    </script>
+</body>
+</html>

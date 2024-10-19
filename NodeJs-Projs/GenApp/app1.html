@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Manipulation Application</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    textarea {
+        width: 80%;
+        height: 100px;
+        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 16px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <h2>Text Manipulation Application</h2>
+    <textarea id="textInput" placeholder="Enter text here..."></textarea><br>
+    <button onclick="convertToUppercase()">Convert to Uppercase</button>
+    <button onclick="convertToLowercase()">Convert to Lowercase</button>
+    <button onclick="reverseText()">Reverse Text</button><br><br><br>
+    <div id="output"></div>
+
+    <script>
+        function convertToUppercase() {
+            var inputText = document.getElementById("textInput").value;
+            var outputText = inputText.toUpperCase();
+            document.getElementById("output").innerHTML = outputText;
+        }
+
+        function convertToLowercase() {
+            var inputText = document.getElementById("textInput").value;
+            var outputText = inputText.toLowerCase();
+            document.getElementById("output").innerHTML = outputText;
+        }
+
+        function reverseText() {
+            var inputText = document.getElementById("textInput").value;
+            var outputText = inputText.split("").reverse().join("");
+            document.getElementById("output").innerHTML = outputText;
+        }
+    </script>
+</body>
+</html>
